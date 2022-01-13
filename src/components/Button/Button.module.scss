@@ -1,0 +1,9 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/colors.module' as *;
+
+.container {
+    width: 100%;
+
+    .content {
+    }
+}
