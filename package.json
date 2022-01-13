@@ -21,7 +21,9 @@
     "sass": "^1.47.0"
   },
   "devDependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "stylelint": "^14.2.0",
+    "stylelint-config-sass-guidelines": "^9.0.1"
   },
   "repository": {
     "type": "git",
