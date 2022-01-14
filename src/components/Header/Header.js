@@ -66,6 +66,11 @@ export default function Header() {
             </button>
           </div>
           <div className={itemListWrapper}>
+          <div className={listItem}>
+              <a href="/" className={listText}>
+                HOME
+              </a>
+            </div>
             <div className={listItem}>
               <a href="/quem-somos" className={listText}>
                 QUEM SOMOS
