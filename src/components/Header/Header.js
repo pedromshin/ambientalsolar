@@ -67,7 +67,24 @@ export default function Header() {
           </div>
           <div className={itemListWrapper}>
             <div className={listItem}>
-              <a href='/quem-somos' className={listText}>QUEM SOMOS</a>
+              <a href="/quem-somos" className={listText}>
+                QUEM SOMOS
+              </a>
+            </div>
+            <div className={listItem}>
+              <a href="/nossa-missao" className={listText}>
+                NOSSA MISSÃO
+              </a>
+            </div>
+            <div className={listItem}>
+              <a href="/projetos-realizados" className={listText}>
+                PROJETOS REALIZADOS
+              </a>
+            </div>
+            <div className={listItem}>
+              <a href="/equipe" className={listText}>
+                EQUIPE
+              </a>
             </div>
           </div>
         </div>

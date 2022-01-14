@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 
-export default function QuemSomos() {
+export default function NossaMissao() {
   return (
     <div>
       <Header></Header>
