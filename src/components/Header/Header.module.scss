@@ -2,19 +2,29 @@
 @use '../../styles/colors.module' as *;
 
 .container {
-  width: 100%;
+  width: 100vw;
 
-  
+  position: fixed;
+
+  z-index: 1;
+
   background-color: $backgroundBlack;
+
+  transition: all 0.2s ease-in-out;
   
   .content {
     width: 100%;
+
+    width: 87%;
+    max-width: 1200px;
     height: 72px;
 
     display: flex;
 
     align-items: center;
     justify-content: space-between;
+    
+    margin: 0 auto;
 
     .logo {
       width: 100px;
@@ -60,10 +70,21 @@
 
   position: absolute;
   top: 0;
+  right: -100vw;
 
+  z-index: 2;
+  
   background-color: $backgroundBlack;
 
+  transition: right 0.5s;
+
+  &.open {
+    right: 0;
+  }
+
   .drawerContent {
+    width: 87%;
+    max-width: 1200px;
     height: 72px;
 
     display: flex;
@@ -72,6 +93,8 @@
     align-items: center;
 
     justify-content: space-between;
+
+    margin: 0 auto;
 
     .logo {
       width: 100px;

@@ -10,6 +10,7 @@ import {
   button,
   drawerContainer,
   drawerContent,
+  open,
   exitButton,
 } from './Header.module.scss';
 
@@ -20,6 +21,8 @@ export default function Header() {
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [isSwipingDown, setIsSwipingDown] = useState(false);
   const [previousScrollPosition, setPreviousScrollPosition] = useState(0);
+
+  const drawerContainerClass = [drawerContainer, open];
 
   const getStyle = () => {
     const style = { top: '0px' };
@@ -39,27 +42,27 @@ export default function Header() {
 
   const renderHeader = () => {
     return (
-      <Container className={container} style={getStyle()}>
+      <header className={container} style={getStyle()}>
         <div className={content}>
           {renderLogo()}
           <button type="button" className={button} onClick={() => setDrawerVisible(true)}>
             <img src="/hamburger.svg" className={hamburger} />
           </button>
         </div>
-      </Container>
+      </header>
     );
   };
 
   const renderDrawer = () => {
     return (
-      <Container className={drawerContainer}>
+      <div className={drawerVisible ? drawerContainerClass.join(' ') : drawerContainer}>
         <div className={drawerContent}>
           {renderLogo()}
           <button type="button" className={exitButton} onClick={() => setDrawerVisible(false)}>
             <img src="/exit.svg" alt="exit" />
           </button>
         </div>
-      </Container>
+      </div>
     );
   };
 
@@ -73,5 +76,10 @@ export default function Header() {
     setPreviousScrollPosition(y);
   }, [y, previousScrollPosition, isSwipingDown]);
 
-  return <>{drawerVisible ? renderDrawer() : renderHeader()}</>;
+  return (
+    <>
+      {renderDrawer()}
+      {renderHeader()}
+    </>
+  );
 }
