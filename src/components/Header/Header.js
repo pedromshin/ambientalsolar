@@ -10,11 +10,13 @@ import {
   button,
   drawerContainer,
   drawerContent,
+  drawerTopWrapper,
+  itemListWrapper,
+  listItem,
+  listText,
   open,
   exitButton,
 } from './Header.module.scss';
-
-import Container from '../Container/Container';
 
 export default function Header() {
   const { y } = useWindowScroll();
@@ -57,10 +59,17 @@ export default function Header() {
     return (
       <div className={drawerVisible ? drawerContainerClass.join(' ') : drawerContainer}>
         <div className={drawerContent}>
-          {renderLogo()}
-          <button type="button" className={exitButton} onClick={() => setDrawerVisible(false)}>
-            <img src="/exit.svg" alt="exit" />
-          </button>
+          <div className={drawerTopWrapper}>
+            {renderLogo()}
+            <button type="button" className={exitButton} onClick={() => setDrawerVisible(false)}>
+              <img src="/exit.svg" alt="exit" />
+            </button>
+          </div>
+          <div className={itemListWrapper}>
+            <div className={listItem}>
+              <a href='/quem-somos' className={listText}>QUEM SOMOS</a>
+            </div>
+          </div>
         </div>
       </div>
     );
