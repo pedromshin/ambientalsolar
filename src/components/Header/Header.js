@@ -18,7 +18,7 @@ import {
   exitButton,
 } from './Header.module.scss';
 
-export default function Header() {
+export default function Header(props) {
   const { y } = useWindowScroll();
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [isSwipingDown, setIsSwipingDown] = useState(false);
@@ -34,6 +34,11 @@ export default function Header() {
     return style;
   };
 
+  const handleOpen = () => {
+    setDrawerVisible(true);
+    if (props.isOpen) props.isOpen();
+  };
+
   const renderLogo = () => {
     return (
       <a href="/">
@@ -47,7 +52,7 @@ export default function Header() {
       <header className={container} style={getStyle()}>
         <div className={content}>
           {renderLogo()}
-          <button type="button" className={button} onClick={() => setDrawerVisible(true)}>
+          <button type="button" className={button} onClick={handleOpen}>
             <img src="/hamburger.svg" alt="hamburger.svg" className={hamburger} />
           </button>
         </div>

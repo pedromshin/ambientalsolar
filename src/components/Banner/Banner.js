@@ -13,7 +13,7 @@ import {
 } from './Banner.module.scss';
 import Container from '../Container/Container';
 
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from 'gatsby-plugin-image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { EffectCoverflow, Pagination } from 'swiper';
