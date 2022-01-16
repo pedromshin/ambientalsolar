@@ -9,7 +9,7 @@ import {
   sliderWrapper,
   slide,
   slideImage,
-  filler
+  filler,
 } from './Banner.module.scss';
 import Container from '../Container/Container';
 

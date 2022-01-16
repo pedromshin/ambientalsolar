@@ -17,7 +17,7 @@ export default function Home() {
       </Helmet>
       <Header />
       <Banner />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
