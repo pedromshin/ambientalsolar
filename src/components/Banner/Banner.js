@@ -13,6 +13,8 @@ import {
 } from './Banner.module.scss';
 import Container from '../Container/Container';
 
+import { StaticImage } from "gatsby-plugin-image"
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { EffectCoverflow, Pagination } from 'swiper';
 import 'swiper/css/effect-coverflow';
@@ -45,36 +47,43 @@ function Banner() {
           className={sliderWrapper}
         >
           <SwiperSlide className={slide}>
-            <img
-              src="/projetosFotos/costaVerde/foto1.jpg"
+            <StaticImage
+              src="./projetosFotos/costaVerde/foto1.webp"
               className={slideImage}
               alt="slideImage"
             />
           </SwiperSlide>
           <SwiperSlide className={slide}>
-            <img
-              src="/projetosFotos/costaVerde/foto2.jpg"
+            <StaticImage
+              src="./projetosFotos/costaVerde/foto2.webp"
               className={slideImage}
               alt="slideImage"
             />
           </SwiperSlide>
           <SwiperSlide className={slide}>
-            <img
-              src="/projetosFotos/costaVerde/foto3.jpg"
+            <StaticImage
+              src="./projetosFotos/costaVerde/foto3.webp"
               className={slideImage}
               alt="slideImage"
             />
           </SwiperSlide>
           <SwiperSlide className={slide}>
-            <img
-              src="/projetosFotos/costaVerde/foto4.jpg"
+            <StaticImage
+              src="./projetosFotos/costaVerde/foto4.webp"
               className={slideImage}
               alt="slideImage"
             />
           </SwiperSlide>
           <SwiperSlide className={slide}>
-            <img
-              src="/projetosFotos/costaVerde/foto5.jpg"
+            <StaticImage
+              src="./projetosFotos/costaVerde/foto5.webp"
+              className={slideImage}
+              alt="slideImage"
+            />
+          </SwiperSlide>
+          <SwiperSlide className={slide}>
+            <StaticImage
+              src="./projetosFotos/costaVerde/foto6.webp"
               className={slideImage}
               alt="slideImage"
             />
