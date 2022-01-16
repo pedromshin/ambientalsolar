@@ -1,5 +1,5 @@
 import React from 'react';
-import { container, content, title, sliderWrapper, slide, slideImage } from './Banner.module.scss';
+import { container, content, textWrapper, title, subtitle, sliderWrapper, slide, slideImage } from './Banner.module.scss';
 import Container from '../Container/Container';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,9 +14,15 @@ function Banner() {
   return (
     <Container className={container}>
       <div className={content}>
+        <div className={textWrapper}>
+
         <h2 className={title}>
           Projetos
         </h2>
+        <span className={subtitle}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </span>
+        </div>
         <Swiper
           effect={'coverflow'}
           grabCursor={true}

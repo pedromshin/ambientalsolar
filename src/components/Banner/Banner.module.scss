@@ -4,12 +4,25 @@
 .container {
   margin-top: 72px;
 
-  padding-bottom: 20px;
+  padding: 20px 0;
 
   background-color: $black;
 
   .content {
     color: $white;
+
+    .textWrapper {
+      margin-bottom: 25px;
+
+      .title {
+        text-align: center;
+      }
+      
+      .subtitle {
+        text-align: center;
+
+      }
+    }
 
     .sliderWrapper {
       .slide {
