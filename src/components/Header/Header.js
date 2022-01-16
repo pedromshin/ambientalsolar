@@ -97,7 +97,7 @@ export default function Header(props) {
               </a>
             </div>
             <div className={listItem}>
-              <a href="/equipe" className={listText}>
+              <a href="/energia-solar" className={listText}>
                 ENERGIA SOLAR
               </a>
             </div>
