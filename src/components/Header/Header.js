@@ -37,7 +37,7 @@ export default function Header() {
   const renderLogo = () => {
     return (
       <a href="/">
-        <img src="/logoNoText.png" className={logo} />
+        <img src="/logoNoText.png" alt="logoNoText.png" className={logo} />
       </a>
     );
   };
@@ -48,7 +48,7 @@ export default function Header() {
         <div className={content}>
           {renderLogo()}
           <button type="button" className={button} onClick={() => setDrawerVisible(true)}>
-            <img src="/hamburger.svg" className={hamburger} />
+            <img src="/hamburger.svg" alt="hamburger.svg" className={hamburger} />
           </button>
         </div>
       </header>
@@ -66,7 +66,7 @@ export default function Header() {
             </button>
           </div>
           <div className={itemListWrapper}>
-          <div className={listItem}>
+            <div className={listItem}>
               <a href="/" className={listText}>
                 HOME
               </a>
@@ -89,6 +89,11 @@ export default function Header() {
             <div className={listItem}>
               <a href="/equipe" className={listText}>
                 EQUIPE
+              </a>
+            </div>
+            <div className={listItem}>
+              <a href="/equipe" className={listText}>
+                ENERGIA SOLAR
               </a>
             </div>
           </div>

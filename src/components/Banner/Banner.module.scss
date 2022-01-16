@@ -1,0 +1,21 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/colors.module' as *;
+
+.container {
+  margin-top: 72px;
+
+  background-color: $black;
+
+  .content {
+    color: $white;
+
+    .sliderWrapper {
+      .slide {
+        max-width: 100px;
+        max-height: 70px;
+
+        background-size: cover;
+      }
+    }
+  }
+}
