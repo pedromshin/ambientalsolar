@@ -15,7 +15,7 @@ export default function Home() {
         <meta name='description' content='Beta website for solar energy company'/>
         <meta name="keywords" content="Energia, Solar, Construções, Empresa, Brasil, Rio de Janeiro"></meta>
         <title>Ambiental</title>
-        <link rel="canonical" href="https://ambiental.gatsby.io/" />
+        <link rel="canonical" href="https://ambiental.gatsbyjs.io/" />
       </Helmet>
       <Header />
       <Banner />
