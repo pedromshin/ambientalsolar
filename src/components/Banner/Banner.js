@@ -9,6 +9,7 @@ import {
   sliderWrapper,
   slide,
   slideImage,
+  filler
 } from './Banner.module.scss';
 import Container from '../Container/Container';
 
@@ -79,6 +80,7 @@ function Banner() {
             />
           </SwiperSlide>
         </Swiper>
+        <div className={filler}></div>
       </div>
     </Container>
   );
