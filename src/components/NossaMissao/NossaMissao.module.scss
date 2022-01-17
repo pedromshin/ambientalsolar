@@ -23,7 +23,26 @@
     margin-bottom: 40px;
 
     .subtitle {
+      color: $gray800;
+
       font-size: 1.2rem;
+    }
+  }
+}
+
+@include from1024 {
+  .container {
+    .textWrapper {
+      .title {
+        font-size: 3.6rem;
+
+        margin: 0 0 45px;
+      }
+
+      .subtitle {
+        text-align: start;
+        font-size: 1.4rem;
+      }
     }
   }
 }

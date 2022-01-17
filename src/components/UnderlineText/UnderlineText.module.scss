@@ -1,7 +1,7 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/colors.module' as *;
 
-.text {
+.container {
   max-width: fit-content;
 
   margin: 0 auto 30px;
@@ -17,6 +17,14 @@
 
     &.logoYellow {
       border-color: $logoYellow;
+    }
+  }
+}
+
+@include from1024 {
+  .container {
+    .underline {
+      max-width: 70px;
     }
   }
 }

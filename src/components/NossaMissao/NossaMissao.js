@@ -1,5 +1,5 @@
 import React from 'react';
-import { container, textWrapper, subtitle, filler } from './NossaMissao.module.scss';
+import { container, textWrapper, title, subtitle, filler } from './NossaMissao.module.scss';
 
 import Container from '../Container/Container';
 import UnderlineText from '../UnderlineText/UnderlineText';
@@ -8,7 +8,7 @@ function NossaMissao() {
   return (
     <Container className={container}>
       <div className={textWrapper}>
-        <UnderlineText text="Nossa Missão" underlineColor="logoGreen" />
+        <UnderlineText text="Nossa Missão" underlineColor="logoGreen" className={title}/>
         <span className={subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
       </div>
       <div className={filler}></div>

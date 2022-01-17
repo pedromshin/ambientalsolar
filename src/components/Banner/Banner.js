@@ -3,6 +3,7 @@ import {
   container,
   content,
   textWrapper,
+  title,
   subtitle,
   sliderWrapper,
   slide,
@@ -26,7 +27,7 @@ function Banner() {
     <Container className={container}>
       <div className={content}>
         <div className={textWrapper}>
-          <UnderlineText text="Projetos" underlineColor="logoYellow" />
+          <UnderlineText text="Projetos" underlineColor="logoYellow" className={title}/>
           <span className={subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         </div>
         <Swiper
