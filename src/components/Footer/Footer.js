@@ -8,7 +8,7 @@ import {
   faleConosco,
   contactBorder,
   contact,
-  logo
+  logo,
 } from './Footer.module.scss';
 import Container from '../Container/Container';
 
