@@ -11,7 +11,9 @@ import {
   slideImage,
   filler,
 } from './Banner.module.scss';
+
 import Container from '../Container/Container';
+import UnderlineText from '../UnderlineText/UnderlineText';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -27,9 +29,7 @@ function Banner() {
     <Container className={container}>
       <div className={content}>
         <div className={textWrapper}>
-          <h2 className={title}>
-            Projetos <div className={underline}></div>
-          </h2>
+          <UnderlineText text="Projetos" underlineColor="logoGreen" />
           <span className={subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         </div>
         <Swiper

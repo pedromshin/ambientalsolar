@@ -1,0 +1,23 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/colors.module' as *;
+
+.text {
+  max-width: fit-content;
+
+  margin: 0 auto 20px;
+
+  .underline {
+    max-width: 30px;
+    
+    border-bottom: 5px solid;
+
+    &.logoGreen {
+      border-color: $logoGreen;
+    }
+
+    &.logoYellow {
+      border-color: $logoYellow;
+    }
+  }
+}
+
