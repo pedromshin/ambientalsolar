@@ -1,0 +1,29 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/colors.module' as *;
+
+.filler {
+  height: 5000px;
+}
+
+.container {
+  padding-top: 100px;
+
+  background-color: $gray200;
+
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: $black;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  }
+}

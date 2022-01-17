@@ -3,13 +3,10 @@ import {
   container,
   content,
   textWrapper,
-  title,
-  underline,
   subtitle,
   sliderWrapper,
   slide,
   slideImage,
-  filler,
 } from './Banner.module.scss';
 
 import Container from '../Container/Container';
@@ -29,7 +26,7 @@ function Banner() {
     <Container className={container}>
       <div className={content}>
         <div className={textWrapper}>
-          <UnderlineText text="Projetos" underlineColor="logoGreen" />
+          <UnderlineText text="Projetos" underlineColor="logoYellow" />
           <span className={subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         </div>
         <Swiper
@@ -89,7 +86,6 @@ function Banner() {
             />
           </SwiperSlide>
         </Swiper>
-        <div className={filler}></div>
       </div>
     </Container>
   );

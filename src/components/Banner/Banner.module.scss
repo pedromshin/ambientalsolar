@@ -1,14 +1,10 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/colors.module' as *;
 
-.filler {
-  height: 5000px;
-}
-
 .container {
   margin-top: 72px;
 
-  padding: 20px 0;
+  padding: 100px 0 90px;
 
   background-color: $black;
 
@@ -23,19 +19,7 @@
 
       text-align: center;
 
-      margin-bottom: 40px;
-
-      .title {
-        max-width: fit-content;
-
-        margin: 0 auto 20px;
-
-        .underline {
-          max-width: 30px;
-    
-          border-bottom: 5px solid $logoGreen;
-        }
-      }
+      margin-bottom: 50px;
       
       .subtitle {
         font-size: 1.2rem;

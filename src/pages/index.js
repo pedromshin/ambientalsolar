@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header/Header';
 import Banner from '../components/Banner/Banner';
 import Footer from '../components/Footer/Footer';
+import NossaMissao from '../components/NossaMissao/NossaMissao';
 
 import { Helmet } from 'react-helmet';
 
@@ -34,6 +35,7 @@ export default function Home() {
       <div className={containerClass.join(' ')}>
         <Header isOpen={handleOpen} />
         <Banner />
+        <NossaMissao />
         <Footer />
       </div>
     </>
