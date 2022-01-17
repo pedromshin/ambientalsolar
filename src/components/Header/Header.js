@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useWindowScroll } from 'react-use';
+import { useWindowScroll, useWindowSize, useIsomorphicLayoutEffect } from 'react-use';
 
 import {
   container,
@@ -16,10 +16,16 @@ import {
   listText,
   open,
   exitButton,
+  headerItem,
 } from './Header.module.scss';
+
+const DESKTOP_SIZE = 1024;
 
 export default function Header(props) {
   const { y } = useWindowScroll();
+  const { width } = useWindowSize();
+
+  const [isDesktop, setIsDesktop] = useState(false);
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [isSwipingDown, setIsSwipingDown] = useState(false);
   const [previousScrollPosition, setPreviousScrollPosition] = useState(0);
@@ -47,7 +53,7 @@ export default function Header(props) {
     );
   };
 
-  const renderHeader = () => {
+  const renderMobileHeader = () => {
     return (
       <header className={container} style={getStyle()}>
         <div className={content}>
@@ -55,6 +61,34 @@ export default function Header(props) {
           <button type="button" className={button} onClick={handleOpen}>
             <img src="/hamburger.svg" alt="hamburger.svg" className={hamburger} />
           </button>
+        </div>
+      </header>
+    );
+  };
+
+  const renderDesktopHeader = () => {
+    return (
+      <header className={container} style={getStyle()}>
+        <div className={content}>
+          {renderLogo()}
+          <div>
+
+          <a href="/" className={headerItem}>
+            Home
+          </a>
+          <a href="/quem-somos" className={headerItem}>
+            Quem Somos
+          </a>
+          <a href="/nossa-missao" className={headerItem}>
+            Nossa Missão
+          </a>
+          <a href="/equipe" className={headerItem}>
+            Equipe
+          </a>
+          <a href="/energia-solar" className={headerItem}>
+            Energia Solar
+          </a>
+          </div>
         </div>
       </header>
     );
@@ -87,11 +121,6 @@ export default function Header(props) {
               </a>
             </div>
             <div className={listItem}>
-              <a href="/projetos-realizados" className={listText}>
-                PROJETOS REALIZADOS
-              </a>
-            </div>
-            <div className={listItem}>
               <a href="/equipe" className={listText}>
                 EQUIPE
               </a>
@@ -117,10 +146,14 @@ export default function Header(props) {
     setPreviousScrollPosition(y);
   }, [y, previousScrollPosition, isSwipingDown]);
 
+  useIsomorphicLayoutEffect(() => {
+    setIsDesktop(width >= DESKTOP_SIZE);
+  }, [width]);
+
   return (
     <>
       {renderDrawer()}
-      {renderHeader()}
+      {isDesktop ? renderDesktopHeader() : renderMobileHeader()}
     </>
   );
 }

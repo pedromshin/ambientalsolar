@@ -23,7 +23,7 @@
 
     width: 87%;
     max-width: 1200px;
-    height: 100px;
+    height: 80px;
 
     display: flex;
 
@@ -125,6 +125,24 @@
 
           text-decoration: none;
         }
+      }
+    }
+  }
+}
+
+@include from1024 {
+  .container {
+    .content {
+      .headerItem {
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 500;
+        
+        letter-spacing: 2px;
+
+        text-decoration: none;
+
+        margin-right: 40px;
       }
     }
   }
