@@ -21,12 +21,11 @@ import Button from '../Button/Button';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { EffectCoverflow, Pagination } from 'swiper';
+import SwiperCore, { EffectCoverflow } from 'swiper';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
 import 'swiper/css';
 
-SwiperCore.use([EffectCoverflow, Pagination]);
+SwiperCore.use([EffectCoverflow]);
 
 const DESKTOP_SIZE = 1024;
 
@@ -43,7 +42,6 @@ function Banner() {
   const renderSwiper = () => {
     return (
       <Swiper
-        modules={[Pagination]}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -53,7 +51,7 @@ function Banner() {
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         }}
         className={sliderWrapper}
       >
