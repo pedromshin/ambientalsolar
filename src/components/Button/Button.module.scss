@@ -2,9 +2,41 @@
 @use '../../styles/colors.module' as *;
 
 .container {
-  width: 100%;
+  width: fit-content;
 
-  .content {
+  .button {
     width: 100%;
+
+    color: $whiteIce;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    padding: 5px 11px;
+
+    border-style: solid;
+
+    border-color: $whiteIce;
+
+    background: transparent;
+    border-radius: 30px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    &.logoYellow {
+      color: $logoYellow;
+
+      border-color: $logoYellow;
+    }
+
+    &.logoGreen {
+      color: $logoGreen;
+
+      border-color: $logoGreen;
+
+    }
   }
 }

@@ -72,22 +72,21 @@ export default function Header(props) {
         <div className={content}>
           {renderLogo()}
           <div>
-
-          <a href="/" className={headerItem}>
-            Home
-          </a>
-          <a href="/quem-somos" className={headerItem}>
-            Quem Somos
-          </a>
-          <a href="/nossa-missao" className={headerItem}>
-            Nossa Missão
-          </a>
-          <a href="/equipe" className={headerItem}>
-            Equipe
-          </a>
-          <a href="/energia-solar" className={headerItem}>
-            Energia Solar
-          </a>
+            <a href="/" className={headerItem}>
+              Home
+            </a>
+            <a href="/quem-somos" className={headerItem}>
+              Quem Somos
+            </a>
+            <a href="/nossa-missao" className={headerItem}>
+              Nossa Missão
+            </a>
+            <a href="/equipe" className={headerItem}>
+              Equipe
+            </a>
+            <a href="/energia-solar" className={headerItem}>
+              Energia Solar
+            </a>
           </div>
         </div>
       </header>

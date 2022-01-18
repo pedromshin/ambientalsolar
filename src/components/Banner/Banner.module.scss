@@ -32,7 +32,15 @@
       }
     }
 
+    .saibaMais {
+      margin: 75px 0 0 auto;
+    }
+
     .sliderWrapper {
+      .paginationDot {
+        width: 10px;
+      }
+
       .slide {
         max-width: 50%;
         max-height: 100vw;
@@ -52,6 +60,10 @@
   .container {
     .content {
       flex-direction: row;
+
+      .saibaMais {
+        margin: 75px 0 0;
+      }
 
       .textWrapper {
         justify-content: flex-start;
