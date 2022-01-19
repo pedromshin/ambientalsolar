@@ -13,7 +13,9 @@ export default function Button(props) {
   const renderSaibaMais = () => {
     return (
       <div className={containerClass.join(' ')}>
-        <a className={buttonClass.join(' ')} href={props.href}>{props.text}</a>
+        <a className={buttonClass.join(' ')} href={props.href}>
+          {props.text}
+        </a>
       </div>
     );
   };

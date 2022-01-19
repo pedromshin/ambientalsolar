@@ -1,49 +1,49 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/colors.module' as *;
 
+
+.filler {
+  height: 2000px;
+}
+  
 .container {
-  padding: 100px 0 50px;
-
-  background-color: $gray200;
-
+  padding-top: 100px;
+  
+  background-color: $black;
+  
   .textWrapper {
     display: flex;
     flex-direction: column;
-
+  
     justify-content: center;
-
-    color: $black;
-
+  
+    color: $white;
+  
     text-align: center;
-
+  
     margin-bottom: 40px;
-
-    .title {
-      white-space: nowrap;
-
-    }
-
+  
     .subtitle {
-      color: $gray800;
-
+      color: $gray300;
+  
       font-size: 1.2rem;
     }
   }
-
+  
   .saibaMais {
     margin: 75px 0 0 auto;
   }
 }
-
+  
 @include from1024 {
   .container {
     .textWrapper {
       .title {
         font-size: 3.6rem;
-
+  
         margin: 0 0 45px;
       }
-
+  
       .subtitle {
         text-align: start;
         font-size: 1.4rem;

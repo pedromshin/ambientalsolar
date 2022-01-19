@@ -34,10 +34,8 @@ function Banner() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   const renderButton = () => {
-    return (
-      <Button text="Saiba Mais" className={saibaMais} buttonColor="logoYellow" href='/' />
-    )
-  }
+    return <Button text="Saiba Mais" className={saibaMais} buttonColor="logoYellow" href="/" />;
+  };
 
   const renderSwiper = () => {
     return (

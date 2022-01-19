@@ -4,6 +4,7 @@ import Header from '../components/Header/Header';
 import Banner from '../components/Banner/Banner';
 import Footer from '../components/Footer/Footer';
 import NossaMissao from '../components/NossaMissao/NossaMissao';
+import Compromisso from '../components/Compromisso/Compromisso';
 
 import { Helmet } from 'react-helmet';
 
@@ -36,6 +37,7 @@ export default function Home() {
         <Header isOpen={handleOpen} />
         <Banner />
         <NossaMissao />
+        <Compromisso />
         <Footer />
       </div>
     </>
