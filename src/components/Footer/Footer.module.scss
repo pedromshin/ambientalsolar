@@ -1,6 +1,7 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/colors.module' as *;
 
+
 .container {
   padding: 85px 0 35px;
 
@@ -9,60 +10,71 @@
   .content {
     .itemListWrapper {
       display: block;
-      
-      .listItem {
-        margin-bottom: 50px;
+    }
+  }
+}
 
-        &.faleConosco {
-          display: flex;
-          flex-direction: column;
+.logo {
+  max-width: 50%;
 
-          .contactBorder {
-            display: flex;
-            flex-direction: column;
+  margin: 50px 0 25px;
+}
 
-            margin: 25px 0 0 25px;
+.listItem {
+  margin-bottom: 50px;
 
-            padding: 15px 0 0 25px;
+  &.faleConosco {
+    display: flex;
+    flex-direction: column;
 
-            border-left: solid;
+    .contactBorder {
+      display: flex;
+      flex-direction: column;
 
-            border-color: $gray500;
+      margin: 25px 0 0 25px;
 
-            border-width: 2px;
+      padding: 15px 0 0 25px;
 
-            .contact {
-              color: $gray500;
-              font-size: 18px;
-              
-              font-weight: normal;
-              line-height: 24px;
-              
+      border-left: solid;
 
-              letter-spacing: 1px;
+      border-color: $gray500;
 
-              margin-bottom: 21px;
-            }
-          }
-        }
+      border-width: 2px;
+
+      .contact {
+        color: $gray500;
+        font-size: 18px;
         
-        .listText {
-          color: #fff;
-          font-size: 1.6rem;
-          font-weight: 500;
-          text-transform: uppercase;
-          
-          letter-spacing: 2px;
-          
-          text-decoration: none;
-        }
+        font-weight: normal;
+        line-height: 24px;
+        
+
+        letter-spacing: 1px;
+
+        margin-bottom: 21px;
       }
     }
+  }
+  
+  .listText {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    
+    letter-spacing: 2px;
+    
+    text-decoration: none;
+  }
+}
 
-    .logo {
-      max-width: 100%;
+@include from1024 {
+  .container {
+    .content {
+      display: flex;
+      flex-direction: row;
 
-      margin: 50px 0 25px;
+      justify-content: space-evenly;
     }
   }
 }

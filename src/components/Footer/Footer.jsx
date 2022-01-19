@@ -23,6 +23,19 @@ function Footer() {
     );
   };
 
+  const renderFaleConosco = () => {
+    return (
+      <div className={faleConoscoClass.join(' ')}>
+        <span className={listText}>Fale Conosco</span>
+        <div className={contactBorder}>
+          <span className={contact}>Telefone: (21) 9-9999-9999</span>
+          <span className={contact}>Whatsapp: (21) 9-9999-9999</span>
+          <span className={contact}>e-mail: abcdef@fghi.com.br</span>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <Container className={container}>
       <div className={content}>
@@ -57,17 +70,10 @@ function Footer() {
               ENERGIA SOLAR
             </a>
           </div>
-          <div className={faleConoscoClass.join(' ')}>
-            <span className={listText}>Fale Conosco</span>
-            <div className={contactBorder}>
-              <span className={contact}>Telefone: (21) 9-9999-9999</span>
-              <span className={contact}>Whatsapp: (21) 9-9999-9999</span>
-              <span className={contact}>e-mail: abcdef@fghi.com.br</span>
-            </div>
-          </div>
-          {renderLogo()}
         </div>
+        {renderFaleConosco()}
       </div>
+        {renderLogo()}
     </Container>
   );
 }
