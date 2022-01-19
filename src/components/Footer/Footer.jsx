@@ -73,7 +73,7 @@ function Footer() {
         </div>
         {renderFaleConosco()}
       </div>
-        {renderLogo()}
+      {renderLogo()}
     </Container>
   );
 }

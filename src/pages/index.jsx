@@ -5,6 +5,7 @@ import Banner from '../components/Banner/Banner';
 import Footer from '../components/Footer/Footer';
 import NossaMissao from '../components/NossaMissao/NossaMissao';
 import Compromisso from '../components/Compromisso/Compromisso';
+import QuemSomos from '../components/QuemSomos/QuemSomos';
 
 import { Helmet } from 'react-helmet';
 
@@ -38,6 +39,7 @@ export default function Home() {
         <Banner />
         <NossaMissao />
         <Compromisso />
+        <QuemSomos />
         <Footer />
       </div>
     </>

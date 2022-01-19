@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  container,
-  textWrapper,
-  title,
-  subtitle,
-  saibaMais,
-  filler,
-} from './Compromisso.module.scss';
+import { container, textWrapper, title, subtitle, saibaMais } from './Compromisso.module.scss';
 
 import Container from '../Container/Container';
 import UnderlineText from '../UnderlineText/UnderlineText';
@@ -24,7 +17,6 @@ function Compromisso() {
         <span className={subtitle}>Ser único</span>
       </div>
       <Button text="Saiba Mais" className={saibaMais} buttonColor="logoGreen" href="/" />
-      <div className={filler}></div>
     </Container>
   );
 }
