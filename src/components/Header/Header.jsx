@@ -19,6 +19,8 @@ import {
   headerItem,
 } from './Header.module.scss';
 
+import { siteLinks } from '../data.json';
+
 const DESKTOP_SIZE = 1024;
 
 export default function Header(props) {
@@ -66,28 +68,38 @@ export default function Header(props) {
     );
   };
 
+  const renderHeaderItems = () => {
+    const headerItems = siteLinks.map((item) => {
+      return (
+        <a href={item.url} className={headerItem} key={item.id}>
+          {item.name}
+        </a>
+      );
+    });
+
+    return headerItems;
+  };
+
+  const renderDrawerItems = () => {
+    const drawerItems = siteLinks.map((item) => {
+      return (
+        <div className={listItem}>
+          <a href={item.url} className={listText} key={item.id}>
+            {item.name}
+          </a>
+        </div>
+      );
+    });
+
+    return drawerItems;
+  };
+
   const renderDesktopHeader = () => {
     return (
       <header className={container} style={getStyle()}>
         <div className={content}>
           {renderLogo()}
-          <div>
-            <a href="/" className={headerItem}>
-              Home
-            </a>
-            <a href="/quem-somos" className={headerItem}>
-              Quem Somos
-            </a>
-            <a href="/nossa-missao" className={headerItem}>
-              Nossa Missão
-            </a>
-            <a href="/equipe" className={headerItem}>
-              Equipe
-            </a>
-            <a href="/energia-solar" className={headerItem}>
-              Energia Solar
-            </a>
-          </div>
+          <div>{renderHeaderItems()}</div>
         </div>
       </header>
     );
@@ -103,33 +115,7 @@ export default function Header(props) {
               <img src="/exit.svg" alt="exit" />
             </button>
           </div>
-          <div className={itemListWrapper}>
-            <div className={listItem}>
-              <a href="/" className={listText}>
-                HOME
-              </a>
-            </div>
-            <div className={listItem}>
-              <a href="/quem-somos" className={listText}>
-                QUEM SOMOS
-              </a>
-            </div>
-            <div className={listItem}>
-              <a href="/nossa-missao" className={listText}>
-                NOSSA MISSÃO
-              </a>
-            </div>
-            <div className={listItem}>
-              <a href="/equipe" className={listText}>
-                EQUIPE
-              </a>
-            </div>
-            <div className={listItem}>
-              <a href="/energia-solar" className={listText}>
-                ENERGIA SOLAR
-              </a>
-            </div>
-          </div>
+          <div className={itemListWrapper}>{renderDrawerItems()}</div>
         </div>
       </div>
     );

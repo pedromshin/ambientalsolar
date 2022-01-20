@@ -1,0 +1,29 @@
+{
+  "siteLinks": [
+    {
+      "id": 1,
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "id": 2,
+      "name": "Nosso Objetivo",
+      "url": "/nosso-objetivo"
+    },
+    {
+      "id": 3,
+      "name": "Compromisso",
+      "url": "/compromisso"
+    },
+    {
+      "id": 4,
+      "name": "Quem Somos",
+      "url": "/quem-somos"
+    },
+    {
+      "id": 5,
+      "name": "Energia Solar",
+      "url": "/energia-solar"
+    }
+  ]
+}

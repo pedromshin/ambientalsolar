@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  container,
-  textWrapper,
-  title,
-  subtitle,
-  saibaMais,
-} from './QuemSomos.module.scss';
+import { container, textWrapper, title, subtitle, saibaMais } from './QuemSomos.module.scss';
 
 import Container from '../Container/Container';
 import UnderlineText from '../UnderlineText/UnderlineText';

@@ -8,63 +8,59 @@
   background-color: $gray700;
 
   .content {
-    .itemListWrapper {
-      display: block;
-    }
-  }
-}
+    .listItem {
+      margin-bottom: 50px;
 
-.logo {
-  max-width: 50%;
+      &.faleConosco {
+        display: flex;
+        flex-direction: column;
 
-  margin: 50px 0 25px;
-}
+        .contactBorder {
+          display: flex;
+          flex-direction: column;
 
-.listItem {
-  margin-bottom: 50px;
+          margin: 25px 0 0 25px;
 
-  &.faleConosco {
-    display: flex;
-    flex-direction: column;
+          padding: 15px 0 0 25px;
 
-    .contactBorder {
-      display: flex;
-      flex-direction: column;
+          border-left: solid;
 
-      margin: 25px 0 0 25px;
+          border-color: $gray500;
 
-      padding: 15px 0 0 25px;
+          border-width: 2px;
 
-      border-left: solid;
-
-      border-color: $gray500;
-
-      border-width: 2px;
-
-      .contact {
-        color: $gray500;
-        font-size: 18px;
+          .contact {
+            color: $gray500;
+            font-size: 18px;
         
-        font-weight: normal;
-        line-height: 24px;
+            font-weight: normal;
+            line-height: 24px;
         
 
-        letter-spacing: 1px;
+            letter-spacing: 1px;
 
-        margin-bottom: 21px;
+            margin-bottom: 21px;
+          }
+        }
+      }
+  
+      .listText {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    
+        letter-spacing: 2px;
+    
+        text-decoration: none;
       }
     }
-  }
-  
-  .listText {
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    
-    letter-spacing: 2px;
-    
-    text-decoration: none;
+
+    .logoWrapper {
+      .logoImage {
+        max-width: 100%;
+      }
+    }
   }
 }
 
@@ -74,7 +70,13 @@
       display: flex;
       flex-direction: row;
 
-      justify-content: space-evenly;
+      justify-content: space-between;
+
+      .logoWrapper {
+        .logoImage {
+          max-width: 200px;
+        }
+      }
     }
   }
 }

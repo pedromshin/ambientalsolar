@@ -2,25 +2,33 @@ import React from 'react';
 import {
   container,
   content,
-  itemListWrapper,
   listItem,
   listText,
   faleConosco,
   contactBorder,
   contact,
-  logo,
+  logoWrapper,
+  logoImage,
 } from './Footer.module.scss';
 import Container from '../Container/Container';
+
+import { siteLinks } from '../data.json';
 
 function Footer() {
   const faleConoscoClass = [listItem, faleConosco];
 
-  const renderLogo = () => {
-    return (
-      <a href="/">
-        <img src="/logo.png" alt="logoNoText.png" className={logo} />
-      </a>
-    );
+  const renderFooterItems = () => {
+    const footerItems = siteLinks.map((item) => {
+      return (
+        <div className={listItem}>
+          <a href={item.url} className={listText} key={item.id}>
+            {item.name}
+          </a>
+        </div>
+      );
+    });
+
+    return <div>{footerItems}</div>;
   };
 
   const renderFaleConosco = () => {
@@ -36,44 +44,21 @@ function Footer() {
     );
   };
 
+  const renderLogo = () => {
+    return (
+      <a href="/" className={logoWrapper}>
+        <img src="/logo.png" alt="logoNoText.png" className={logoImage} />
+      </a>
+    );
+  };
+
   return (
     <Container className={container}>
       <div className={content}>
-        <div className={itemListWrapper}>
-          <div className={listItem}>
-            <a href="/" className={listText}>
-              HOME
-            </a>
-          </div>
-          <div className={listItem}>
-            <a href="/quem-somos" className={listText}>
-              QUEM SOMOS
-            </a>
-          </div>
-          <div className={listItem}>
-            <a href="/nossa-missao" className={listText}>
-              NOSSA MISSÃO
-            </a>
-          </div>
-          <div className={listItem}>
-            <a href="/projetos-realizados" className={listText}>
-              PROJETOS REALIZADOS
-            </a>
-          </div>
-          <div className={listItem}>
-            <a href="/equipe" className={listText}>
-              EQUIPE
-            </a>
-          </div>
-          <div className={listItem}>
-            <a href="/energia-solar" className={listText}>
-              ENERGIA SOLAR
-            </a>
-          </div>
-        </div>
+        {renderFooterItems()}
         {renderFaleConosco()}
+        {renderLogo()}
       </div>
-      {renderLogo()}
     </Container>
   );
 }
