@@ -1,11 +1,11 @@
 import React from 'react';
-import { container, textWrapper, title, subtitle, saibaMais } from './NossaMissao.module.scss';
+import { container, textWrapper, title, subtitle, saibaMais } from './NossoObjetivo.module.scss';
 
 import Container from '../Container/Container';
 import UnderlineText from '../UnderlineText/UnderlineText';
 import Button from '../Button/Button';
 
-function NossaMissao() {
+function NossoObjetivo() {
   return (
     <Container className={container}>
       <div className={textWrapper}>
@@ -16,8 +16,8 @@ function NossaMissao() {
           assegurando o bem-estar social para as próximas gerações.
         </span>
       </div>
-      <Button text="Saiba Mais" className={saibaMais} buttonColor="logoGreen" href="/" />
+      <Button text="Saiba Mais" className={saibaMais} buttonColor="logoGreen" href="/nosso-objetivo" />
     </Container>
   );
 }
-export default NossaMissao;
+export default NossoObjetivo;

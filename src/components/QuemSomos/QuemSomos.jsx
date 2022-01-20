@@ -18,7 +18,7 @@ function QuemSomos() {
           a prática.
         </span>
       </div>
-      <Button text="Saiba Mais" className={saibaMais} buttonColor="logoGreen" href="/" />
+      <Button text="Saiba Mais" className={saibaMais} buttonColor="logoGreen" href="/quem-somos" />
     </Container>
   );
 }
