@@ -6,6 +6,11 @@
       "url": "/"
     },
     {
+      "id": 6,
+      "name": "Projetos",
+      "url": "/projetos"
+    },
+    {
       "id": 2,
       "name": "Nosso Objetivo",
       "url": "/nosso-objetivo"
