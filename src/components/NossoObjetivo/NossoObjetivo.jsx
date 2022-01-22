@@ -16,7 +16,12 @@ function NossoObjetivo() {
           assegurando o bem-estar social para as próximas gerações.
         </span>
       </div>
-      <Button text="Saiba Mais" className={saibaMais} buttonColor="logoGreen" href="/nosso-objetivo" />
+      <Button
+        text="Saiba Mais"
+        className={saibaMais}
+        buttonColor="logoGreen"
+        href="/nosso-objetivo"
+      />
     </Container>
   );
 }

@@ -16,7 +16,12 @@ function Compromisso() {
         <span className={subtitle}>Ser inovador</span>
         <span className={subtitle}>Ser único</span>
       </div>
-      <Button text="Saiba Mais" className={saibaMais} buttonColor="logoYellow" href="/compromisso" />
+      <Button
+        text="Saiba Mais"
+        className={saibaMais}
+        buttonColor="logoYellow"
+        href="/compromisso"
+      />
     </Container>
   );
 }

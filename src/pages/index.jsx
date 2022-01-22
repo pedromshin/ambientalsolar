@@ -24,7 +24,11 @@ export default function Home() {
   return (
     <>
       {/* TODO what is meta charset; what is link rel canonical and href? */}
-      <Helmet>
+      <Helmet
+        htmlAttributes={{
+          lang: 'pt-BR',
+        }}
+      >
         <meta charSet="utf-8" />
         <meta name="description" content="Beta website for solar energy company" />
         <meta
