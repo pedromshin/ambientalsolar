@@ -10,11 +10,13 @@ function Compromisso() {
     <Container className={container}>
       <div className={textWrapper}>
         <UnderlineText text="Compromisso" underlineColor="logoYellow" className={title} />
-        <span className={subtitle}>Construir confiança</span>
-        <span className={subtitle}>Ultrapassar padrões</span>
-        <span className={subtitle}>Ser excelência</span>
-        <span className={subtitle}>Ser inovador</span>
-        <span className={subtitle}>Ser único</span>
+        <ul>
+          <li className={subtitle}>Ser único</li>
+          <li className={subtitle}>Ser inovador</li>
+          <li className={subtitle}>Ser excelência</li>
+          <li className={subtitle}>Construir confiança</li>
+          <li className={subtitle}>Ultrapassar padrões</li>
+        </ul>
       </div>
       <Button
         text="Saiba Mais"

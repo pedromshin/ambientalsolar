@@ -9,6 +9,7 @@ import {
   slide,
   slideImage,
   saibaMais,
+  backgroundPhoto,
 } from './Banner.module.scss';
 
 import { useWindowSize, useIsomorphicLayoutEffect } from 'react-use';
@@ -106,15 +107,21 @@ function Banner() {
   }, [width]);
 
   return (
-    <Container className={container}>
+    <Container className={container} fullwidth>
+      <div className={backgroundPhoto}>
+        <StaticImage src="./fotos/placas.jpg" alt="slideImage" />
+      </div>
       <div className={content}>
         <div className={textWrapper}>
           <UnderlineText text="Projetos" underlineColor="logoYellow" className={title} />
-          <span className={subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <span className={subtitle}>Conheça os empreendimentos de infraestru</span>
           {isDesktop ? renderButton() : <></>}
         </div>
         {renderSwiper()}
         {!isDesktop ? renderButton() : <></>}
+      </div>
+      <div className={backgroundPhoto}>
+        <StaticImage src="./fotos/placas2.jpg" alt="slideImage" />
       </div>
     </Container>
   );

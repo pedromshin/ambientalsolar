@@ -10,6 +10,7 @@ import QuemSomos from '../components/QuemSomos/QuemSomos';
 import { Helmet } from 'react-helmet';
 
 import { container, open } from './Home.module.scss';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function Home() {
   const containerClass = [container];
