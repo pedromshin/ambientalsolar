@@ -1,18 +1,6 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/colors.module' as *;
 
-.backgroundPhoto {
-  min-height: 100%;
-
-  position: relative;
-
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.65;
-}
-
 .container {
   background-color: $black;
 
