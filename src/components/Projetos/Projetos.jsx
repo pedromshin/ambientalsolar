@@ -14,9 +14,9 @@ import {
 import { useWindowSize, useIsomorphicLayoutEffect } from 'react-use';
 import { useState } from 'react';
 
-import Container from '../Container/Container';
-import UnderlineText from '../UnderlineText/UnderlineText';
-import Button from '../Button/Button';
+import Container from '../components/Container/Container';
+import UnderlineText from '../components/UnderlineText/UnderlineText';
+import Button from '../components/Button/Button';
 
 import { StaticImage } from 'gatsby-plugin-image';
 

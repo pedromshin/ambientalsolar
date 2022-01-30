@@ -1,9 +1,9 @@
 import React from 'react';
 import { container, textWrapper, title, subtitle, saibaMais } from './QuemSomos.module.scss';
 
-import Container from '../Container/Container';
-import UnderlineText from '../UnderlineText/UnderlineText';
-import Button from '../Button/Button';
+import Container from '../components/Container/Container';
+import UnderlineText from '../components/UnderlineText/UnderlineText';
+import Button from '../components/Button/Button';
 
 function QuemSomos() {
   return (

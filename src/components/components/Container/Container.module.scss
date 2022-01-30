@@ -1,5 +1,5 @@
-@use '../../styles/mixins' as *;
-@use '../../styles/colors.module' as *;
+@use 'src/styles/mixins' as *;
+@use 'src/styles/colors.module' as *;
 
 .section {
   .container {

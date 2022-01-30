@@ -10,7 +10,7 @@ import {
   logoWrapper,
   logoImage,
 } from './Footer.module.scss';
-import Container from '../Container/Container';
+import Container from '../components/Container/Container';
 
 import { siteLinks } from '../data.json';
 
