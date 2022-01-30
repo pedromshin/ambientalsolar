@@ -9,7 +9,9 @@ import QuemSomos from '../components/QuemSomos/QuemSomos';
 
 import { Helmet } from 'react-helmet';
 
-import { container, open } from './Home.module.scss';
+import { container, open, banner } from './Home.module.scss';
+
+import Container from '../components/components/Container/Container';
 
 export default function Home() {
   const containerClass = [container];
@@ -40,6 +42,7 @@ export default function Home() {
       </Helmet>
       <div className={containerClass.join(' ')}>
         <Header isOpen={handleOpen} />
+        <Container fullwidth className={banner} />
         <Projetos />
         <NossoObjetivo />
         <Compromisso />

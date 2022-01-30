@@ -42,9 +42,13 @@ export default function Header(props) {
     return style;
   };
 
-  const handleOpen = () => {
-    setDrawerVisible(true);
-    if (props.isOpen) props.isOpen();
+  const handleClick = () => {
+    if (!drawerVisible) {
+      setDrawerVisible(true);
+      if (props.isOpen) props.isOpen();
+    } else {
+      setDrawerVisible(false);
+    }
   };
 
   const renderLogo = () => {
@@ -60,8 +64,12 @@ export default function Header(props) {
       <header className={container} style={getStyle()}>
         <div className={content}>
           {renderLogo()}
-          <button type="button" className={button} onClick={handleOpen}>
-            <img src="/hamburger.svg" alt="hamburger.svg" className={hamburger} />
+          <button type="button" className={button} onClick={handleClick}>
+            <img
+              src={!drawerVisible ? '/hamburger.svg' : '/exit.svg'}
+              alt="hamburger.svg"
+              className={hamburger}
+            />
           </button>
         </div>
       </header>
@@ -109,12 +117,7 @@ export default function Header(props) {
     return (
       <div className={drawerVisible ? drawerContainerClass.join(' ') : drawerContainer}>
         <div className={drawerContent}>
-          <div className={drawerTopWrapper}>
-            {renderLogo()}
-            <button type="button" className={exitButton} onClick={() => setDrawerVisible(false)}>
-              <img src="/exit.svg" alt="exit" />
-            </button>
-          </div>
+          <div className={drawerTopWrapper}></div>
           <div className={itemListWrapper}>{renderDrawerItems()}</div>
         </div>
       </div>

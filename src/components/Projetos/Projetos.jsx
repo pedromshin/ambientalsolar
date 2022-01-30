@@ -115,7 +115,7 @@ function Projetos() {
         </div>
         {renderSwiper()}
         {!isDesktop ? renderButton() : <></>}
-      </div>  
+      </div>
     </Container>
   );
 }
