@@ -9,7 +9,7 @@ import {
   slide,
   slideImage,
   saibaMais,
-} from './Banner.module.scss';
+} from './Projetos.module.scss';
 
 import { useWindowSize, useIsomorphicLayoutEffect } from 'react-use';
 import { useState } from 'react';
@@ -29,7 +29,7 @@ SwiperCore.use([EffectCoverflow]);
 
 const DESKTOP_SIZE = 1024;
 
-function Banner() {
+function Projetos() {
   const { width } = useWindowSize();
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -119,4 +119,4 @@ function Banner() {
     </Container>
   );
 }
-export default Banner;
+export default Projetos;

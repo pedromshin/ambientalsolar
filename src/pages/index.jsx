@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Header from '../components/Header/Header';
-import Banner from '../components/Banner/Banner';
+import Projetos from '../components/Projetos/Projetos';
 import Footer from '../components/Footer/Footer';
 import NossoObjetivo from '../components/NossoObjetivo/NossoObjetivo';
 import Compromisso from '../components/Compromisso/Compromisso';
@@ -10,7 +10,6 @@ import QuemSomos from '../components/QuemSomos/QuemSomos';
 import { Helmet } from 'react-helmet';
 
 import { container, open } from './Home.module.scss';
-import { StaticImage } from 'gatsby-plugin-image';
 
 export default function Home() {
   const containerClass = [container];
@@ -41,7 +40,7 @@ export default function Home() {
       </Helmet>
       <div className={containerClass.join(' ')}>
         <Header isOpen={handleOpen} />
-        <Banner />
+        <Projetos />
         <NossoObjetivo />
         <Compromisso />
         <QuemSomos />
